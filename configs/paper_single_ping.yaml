@@ -1,0 +1,49 @@
+
+acoustics:
+  c_mps: 1520.0
+waveform:
+  fs_hz: 50000
+  f0_hz: 0
+  f1_hz: 10000
+  duration_s: 0.010
+  taper: hann
+array:
+  hydrophones_m:
+    - [-0.385,  0.000]
+    - [ 0.000,  0.395]
+    - [ 0.405,  0.000]
+    - [ 0.000, -0.405]
+scene:
+  seed: 0
+  max_range_m: 100.0
+  pri_s: 1.0
+  num_pings: 1
+  noise_snr_db: 10.0
+  targets:
+    - id: 1
+      x0_m: 52.0
+      y0_m: 30.0
+      vx_mps: 0.0
+      vy_mps: 0.0
+      amplitude: 1.0
+beamforming:
+  angles_deg:
+    start: -180
+    stop: 180
+    step: 2
+  linear_shift_pad: 1024
+cfar:
+  pfa: 1.0e-4
+  guard_a: 2
+  guard_r: 4
+  ref_a: 8
+  ref_r: 16
+blob:
+  connectivity: 1
+  min_area: 1
+merge:
+  psi_r_m: 10.0
+  psi_theta_deg: 6.0
+viz:
+  dyn_range_db: 50.0
+  ping_to_plot: 0
